@@ -10,7 +10,7 @@ public class Cat {
     public void eat(Plate plate) {
         int food = plate.getFood();
         if (food < appetite) {
-            System.out.println("Cat doesn't eat food. Food are not enough." );
+            System.out.println("Cat " + this.name + " doesn't eat food. Food are not enough." );
             return;
         }
 
@@ -18,7 +18,9 @@ public class Cat {
         if (wasEaten == appetite) {
             this.isFullness = true;
         }
+    }
 
-        System.out.println("Cat is fullness = " + this.isFullness);
+    public void info() {
+        System.out.println("Cat " + this.name + " is fullness = " + this.isFullness);
     }
 }
