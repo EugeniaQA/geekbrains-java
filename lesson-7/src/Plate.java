@@ -4,6 +4,9 @@ public class Plate {
         this.food = food;
     }
     public void decreaseFood(int n) {
+        if (n > food) {
+            n = food;
+        }
         food -= n;
     }
     public void info() {
