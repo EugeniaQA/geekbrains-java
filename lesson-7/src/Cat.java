@@ -8,6 +8,12 @@ public class Cat {
         this.isFullness = false;
     }
     public void eat(Plate plate) {
+        int food = plate.getFood();
+        if (food < appetite) {
+            System.out.println("Cat doesn't eat food. Food are not enough." );
+            return;
+        }
+
         int wasEaten = plate.decreaseFood(appetite);
         if (wasEaten == appetite) {
             this.isFullness = true;
