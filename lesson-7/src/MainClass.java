@@ -15,5 +15,8 @@ public class MainClass {
             cats[i].info();
             commonPlate.info();
         }
+
+        commonPlate.increaseFood(10);
+        commonPlate.info();
     }
 }
